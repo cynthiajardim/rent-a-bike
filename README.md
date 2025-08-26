@@ -1,9 +1,3 @@
-# g4
-
-## Alunos
-    Vinícius Ouverney (vinicius.ouverney@aluno.cefet-rj.br)
-    Cynthia Arêas Jardim (cynthia.jardim@aluno.cefet-rj.br)
-
 ## Comandos
 É preciso ligar o apache e mariaDB.
 - **Preparação de ambiente** 
@@ -39,5 +33,3 @@ https://www.npmjs.com/package/dompurify - **DOMPurify**
 https://www.npmjs.com/package/@types/jsdom - **jsdom**
 
 https://github.com/vlucas/phpdotenv - **PHPDOTENV**
-
-Observações: A estilização CSS não foi realizada com frameworks e contamos com um auxílio básico do ChatGPT para desenvolver as etapas iniciais da interface, após isso, a membro do grupo refinou a estilização.
