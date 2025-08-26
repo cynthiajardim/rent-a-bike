@@ -1,0 +1,46 @@
+{
+  "name": "g4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run --environment jsdom",
+    "e2e": "playwright test",
+    "start": "vite",
+    "api": "json-server api.json",
+    "prepare": "husky",
+    "db:e": "mysql --default-character-set=utf8mb4 -u root --password=\"\" < api/src/infra/bd/estrutura.sql",
+    "db:d": "mysql --default-character-set=utf8mb4 -u root --password=\"\" g4 < api/src/infra/bd/dados.sql",
+    "db": "pnpm run db:e && pnpm run db:d"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": [
+        "pnpm e2e",
+        "pnpm test",
+        "composer test",
+        "composer stan"
+      ]
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^24.0.3",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "execa": "^9.5.3",
+    "husky": "^9.1.7",
+    "jsdom": "^26.1.0",
+    "json-server": "1.0.0-beta.3",
+    "ts-money": "^0.4.8",
+    "vite": "^6.3.2",
+    "vitest": "^3.1.1"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.9",
+    "dompurify": "^3.2.6"
+  }
+}

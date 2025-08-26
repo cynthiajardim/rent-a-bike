@@ -1,0 +1,52 @@
+{
+    "name": "cynth/g4",
+    "description": "Pacote desenvolvido para o trabalho de Projeto Integrador de Sistemas",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "": [   
+                    "api/",
+                    "api/spec/", 
+                    "api/src/",
+                    "api/src/model/", 
+                    "api/src/model/cliente/", 
+                    "api/src/model/devolucao/", 
+                    "api/src/model/funcionario/", 
+                    "api/src/model/avaria/", 
+                    "api/src/model/item/", 
+                    "api/src/model/locacao/",
+                    "api/src/infra/",
+                    "api/src/infra/repositorio/",
+                    "api/src/infra/util/",
+                    "api/src/infra/excecoes/",
+                    "api/src/infra/seguranca/",
+                    "api/src/infra/session/"
+                ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Cynthia",
+            "email": "cynthiaareasjardim@gmail.com"
+        },
+        {
+            "name": "Vinícius",
+            "email": "vouverney27@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^4.0",
+        "slim/psr7": "^1.7",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "require-dev": {
+        "kahlan/kahlan": "^6.0",
+        "phpstan/phpstan": "^2.1"
+    },
+    "scripts": {
+        "dump": "composer dump-autoload",
+        "start": "php -S localhost:8000 -t api/src",
+        "test": "vendor/bin/kahlan --spec=api/spec",
+        "stan": "vendor/bin/phpstan analyse"
+    }
+}
