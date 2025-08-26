@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/cadastro.css">
+    <link rel="stylesheet" href="../styles/modal.css">
+    <link rel="icon" href="../styles/images/logo.png" type="image/png">
+    <!-- <link rel="stylesheet" href="../styles/cadastro-devolucoes.css"> -->
+    <script src="../src/autenticador/visao-autenticador-html.ts" type="module" defer></script>
+    <script src="../src/devolucao/cadastro/visao-cadastro-devolucao-html.ts" type="module" defer></script>
+    <title>Rent-A-Bike - Cadastrar Devolução</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <a href="../pages/listagem-locacoes.html">
+                <img src="../styles/images/logo.png" alt="Rent-A-Bike Logo" class="logo">
+            </a>
+        </div>
+        <div class="nav-tabs">
+            <a href="../pages/listagem-locacoes.html" class="nav-tab locacoes">Locações</a>
+            <a href="../pages/listagem-devolucoes.html" class="nav-tab active devolucoes">Devoluções</a>
+        </div>
+    </header>
+
+    <section class="cadastro-devolucao">
+        <div class="group-devolucao">
+            <label for="devolucao">Devolução:</label>
+            <input type="datetime-local" id="devolucao" name="devolucao">
+        </div>
+        
+        <div class="group-locacao">
+            <label for="locacao">Locação:</label>
+            <input type="text" name="locacao" id="locacao" placeholder="Id Locação ou CPF Cliente"><button id="pesquisar-locacao">🔍</button>
+            <select id="locacaoId" name="locacaoId" hidden>
+            </select>
+        </div>
+
+        <div class="div-alerta">
+            <output class="fade-in-element fade-out-element" hidden></output>
+        </div>
+    </section>
+
+    <div id="locacaoOutput" hidden></div>
+    
+    <table border="1">
+        <thead>
+            <th>Código</th>
+            <th>Descrição</th>
+            <th>Subtotal</th>
+            <th class="taxa-coluna">Taxa de Limpeza(10%)</th>
+            <th></th>
+        </thead>
+        <tbody class="itens-devolucao"></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6"><img src="../styles/images/total.png" class="icon"/> Valor Total: R$<span id="valor-total"></span></td>
+            </tr>
+            <tr>
+                <td colspan="5"><img src="../styles/images/desconto.png" class="icon"/> Desconto: R$<span id="desconto"></span></td>
+            </tr>
+            <tr>
+                <td colspan="5"><img src="../styles/images/total.png" class="icon"/> Taxa de Limpeza: R$<span id="valor-taxa-limpeza"></span></td>
+            </tr>
+            <tr>
+                <td colspan="5"><img src="../styles/images/total.png" class="icon"/> Multas: R$<span id="valor-multas"></span></td>
+            </tr>
+            <tr>
+                <td colspan="5"><img src="../styles/images/final.png" class="icon"/> Valor Final: R$<span id="valor-final"></span></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <dialog id="registro-avarias">
+        <div class="botao-fechar">
+            <button class="fechar-modal btn-transparent" alt="fechar modal">
+                <img src="../styles/images/close.png">
+            </button>
+        </div>
+        <h2>Registro de Avarias do Item #<span id="item"></span></h2>
+
+        <hr>
+        <div class="bloco-avaria">
+            <div>
+                <label for="funcionario-avaria">Funcionario:</label>
+                <select id="funcionario-avaria" name="funcionario-avaria"></select>
+            </div>
+            <div>
+                <label for="descricao-avaria">Descrição:</label>
+                <input type="text" id="descricao-avaria">
+            </div>
+            <div>
+                <label for="foto-avaria">Imagem:</label>
+                <input type="file" id="foto-avaria" accept=".jpg,.jpeg">
+                <label for="foto-avaria" class="label-foto">
+                    <span>📎 Selecionar imagem</span>
+                    <img src="../styles/images/arquivo.png">
+                </label>
+            </div>
+            <div>
+                <label for="valor">Valor a Cobrar (R$):</label>
+                <input type="number" id="valor">
+            </div>
+            <button id="cadastrar-avaria">Cadastrar</button>
+        </div>
+
+        <div class="avarias-item">
+        <hr>
+            <table border="1" class="tabela-avarias-item" hidden>
+                <thead>
+                    <tr>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Valor(R$)</th>
+                    <th>Imagem</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </dialog>
+    
+    <button id="devolver">Devolver</button>
+
+    <footer>
+        <hr>
+        <div class="links">
+            <a href="./listagem-locacoes.html">Listar Locações</a>
+            <a href="./listagem-devolucoes.html">Listar Devoluções</a>
+            <a href="./cadastrar-locacao.html">Cadastrar Locaçãos</a>
+            <a href="./cadastrar-devolucoes.html">Cadastrar Devoluções</a>
+        </div>
+        <div>
+            © Cynthia Jardim & Vinicius Ouverney
+        </div>
+    </footer>
+</body>
+</html>

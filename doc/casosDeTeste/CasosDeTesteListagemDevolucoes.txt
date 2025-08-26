@@ -1,0 +1,26 @@
+Caso 1 : 
+    Cenário: Listagem de devoluções abrindo corretamente
+    Dado que desejo listar as devoluções de bicicletas e equipamentos
+    Quando abrir a página de devoluções
+    Então a URL deve corresponder à de listagem de devoluções
+
+Caso 2:
+    Cenário: Exibir ao menos uma devolução
+    Dado que desejo listar as devoluções cadastradas
+    Quando abrir a listagem de devoluções
+    Então a tabela deve conter ao menos um registro
+
+TODO:
+Caso 3:
+    Cenário: Tabelas sem itens
+    Dado que a página de devoluções é aberta
+    Quando não houver registros
+    Então uma mensagem indicando que não há cadastros deve aparecer
+
+Caso 4:
+    Cenário: Botão cadastrar altera a URL
+    Dado que desejo registrar uma nova devolução
+    Quando o botão "Registrar locação" for clicado
+    Então a URL da página deve corresponder à URL de cadastro
+
+    

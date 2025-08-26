@@ -1,0 +1,24 @@
+Caso 1 : 
+    Cenário: Abrir a página correta
+    Dado que desejo ver a lista de locações
+    Quando abrir a página de locações
+    então deve alterar sua URL para o caminho correto
+
+Caso 2:
+    Cenário: Verificar listagem das locações registradas
+    Dado que desejo consultar as locações
+    quando abrir a página de locações
+    então deve haver registros na tabela
+
+Caso 3:
+    Cenário: Não há itens na tabela
+    Dado que clico nas locações
+    quando não há registros
+    então deve aparecer mensagem indicando que não existem cadastros
+
+Caso 4:
+    Cenário: Botão cadastrar altera a URL
+    Dado que desejo registrar uma nova locação
+    quando clico no botão "Registrar locação"
+    então deve mudar para URL de cadastro
+

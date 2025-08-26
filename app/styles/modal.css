@@ -1,0 +1,94 @@
+#registro-avarias{
+    background-color: #ffffff;
+    color: #333;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 1.2);
+    animation: slideIn 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 1px;
+    backdrop-filter: blur(6px); 
+    -webkit-backdrop-filter: blur(6px); 
+    z-index: 1000;
+}
+
+.bloco-avaria {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.bloco-avaria div {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 8px); 
+}
+
+.bloco-avaria label {
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.label-foto,
+#funcionario-avaria,
+#descricao-avaria,
+#valor {
+    height: 40px;
+    width: 400px !important;
+    border: solid 1px;
+    border-radius: 8px;
+    background-color: #e7e7e7;
+    padding: 4px 8px;
+}
+
+#foto-avaria {
+    display: none;
+}
+
+.label-foto img{
+    width: 30px;
+    float: inline-end;
+}
+
+#cadastrar-avaria{
+    width: 825px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#cadastrar-avaria:hover{
+    transform: scale(1.0) !important;
+}
+
+.avarias-item{
+    margin-top: 20px;
+}
+.tabela-avarias-item{
+    margin-top: 20px;
+}
+
+.tabela-avarias-item th, tr{
+    padding: 8px;
+}
+
+.botao-fechar{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -25px;
+    margin-right: -20px;
+}
+
+.fechar-modal img{
+    width: 30px;
+}

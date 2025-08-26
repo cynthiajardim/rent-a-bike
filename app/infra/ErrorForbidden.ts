@@ -1,0 +1,1 @@
+export class ErrorForbidden extends Error {}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/listagem.css">
+    <link rel="icon" href="../styles/images/logo.png" type="image/png">
+    <script src="../src/autenticador/visao-autenticador-html.ts" type="module" defer></script>
+    <script src="../src/locacao/listagem/visao-listagem-locacao-html.ts" type="module" defer></script>
+    <title>Rent-A-Bike - Locações</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <a href="../pages/listagem-locacoes.html">
+                <img src="../styles/images/logo.png" alt="Rent-A-Bike Logo" class="logo">
+            </a>
+        </div>
+        <div class="nav-tabs">
+            <a href="../pages/listagem-locacoes.html" class="nav-tab active locacoes">Locações</a>
+            <a href="../pages/listagem-devolucoes.html" class="nav-tab devolucoes">Devoluções</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="div-alerta">
+            <output class="fade-in-element fade-out-element" hidden></output>
+        </div>
+
+        <a href="./cadastrar-locacao.html" class="btn register-btn" id="cadastrar-locacao">Cadastrar Locação</a>
+        <a href="./relatorio-itens-locacoes.html" class="btn graph-btn">Relatório Itens Alugados</a>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Locação</th>
+                    <th>Horas</th>
+                    <th>Entrega</th>
+                    <th>Nome Cliente</th>
+                    <th>Telefone Cliente</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+    
+    <footer>
+        <hr>
+        <div class="links">
+            <a href="./listagem-locacoes.html">Listar Locações</a>
+            <a href="./listagem-devolucoes.html">Listar Devoluções</a>
+            <a href="./cadastrar-locacao.html">Cadastrar Locaçãos</a>
+            <a href="./cadastrar-devolucoes.html">Cadastrar Devoluções</a>
+        </div>
+        <div>
+            © Cynthia Jardim & Vinicius Ouverney
+        </div>
+    </footer>
+</body>
+</html>

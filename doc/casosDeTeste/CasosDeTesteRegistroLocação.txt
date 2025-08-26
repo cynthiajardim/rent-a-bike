@@ -1,0 +1,59 @@
+Caso 1 : 
+    Cenário: Cadastro realizado com sucesso
+    Dado que desejo salvar meus dados
+    quando clico em cadastrar
+    então deve mostrar mensagem de sucesso
+
+Caso 2:
+    Cenário: Dado não preenchido
+    Dado que não preenchi um campo
+    quando clico em cadastrar
+    então deve mostrar mensagem de erro
+
+Caso 3:
+    Cenário: Pesquisar cliente retorna cliente correto
+    Dado que desejo pesquisar um cliente
+    quando digito seu código ou CPF
+    então deve mostrar aquele cliente corretamente
+
+Caso 4:
+    Cenário: Pesquisar cliente não existente
+    Dado que desejo pesquisar um cliente inexiste
+    quando digito um código ou CPF
+    então deve mostrar mensagem de erro
+
+Caso 5:
+    Cenário: Pesquisar item retorna item correto
+    Dado que desejo pesquisar um item
+    quando digito seu código
+    então deve mostrar aquele item corretamente
+
+Caso 6:
+    Cenário: Pesquisar item não existente
+    Dado que desejo pesquisar um item inexiste
+    quando digito um código
+    então deve mostrar mensagem de erro
+
+Caso 7:
+    Cenário: Item adicionado aparece na tabela
+    Dado que escolhi um item correto
+    quando clico em adicionar
+    então deve aparecer na tabela
+
+Caso 8:
+    Cenário: Valores são calculados corretamente
+    Dado que adicionei a qtd de horas
+    quando adiciono os itens desejados
+    então o total deve ser calculado corretamente
+
+Caso 9:
+    Cenário: Remoção de itens da locação 
+    Dado que adicionei itens indesejados
+    quando clico no botão de remover item
+    Então o item deve ser removido da tabela 
+
+Caso 10:
+    Cenário: Item já adicionado não deve ser adicionado novamente
+    Dado que adicionei um item desejado
+    quando tento novamente adicioná-lo à locação
+    Então uma mensagem deve informar que item já foi adicionado

@@ -1,0 +1,28 @@
+/* Estilo do botão de registrar devolução */
+.register-btn {
+    background-color: #9ac4d4;
+}
+
+.btn{
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.graph-btn {
+    background-color: rgb(143, 204, 196) ;
+}
+
+.graph-btn:hover {
+    background-color: rgb(127, 181, 174) ;
+}
+
+.register-btn:hover {
+    background-color: #87b5c6;
+}

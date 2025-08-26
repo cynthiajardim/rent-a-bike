@@ -1,0 +1,41 @@
+Caso 1 : V
+    Cenário: Verificar envio dos dados
+    Dado que desejo salvar uma nova devolução de uma locação com id
+    Quando o botão cadastrar for clicado
+    Então uma mensagem de sucesso deve ser exibida
+
+Caso 2 : V
+    Cenário: Verificar envio dos dados
+    Dado que desejo salvar uma nova devolução de uma locação com cpf
+    Quando o botão cadastrar for clicado
+    Então uma mensagem de sucesso deve ser exibida
+
+Caso 3: V
+    Cenário: Pesquisar cliente retorna locações
+    Dado que desejo pesquisar locações de um cliente
+    Quando digito seu CPF
+    Então as locações deste cliente devem ser exibidas
+
+Caso 4: V
+    Cenário: Pesquisar locação específica
+    Dado que desejo pesquisar uma locação pelo seu Id
+    Quando digito o Id no campo de busca
+    Então a locação referente ao Id deve ser exibida
+
+Caso 5: V
+    Cenário: Selecionar uma locação deve preencher a tabela com seus itens
+    Dado que pesquiso locações pelo id da locação
+    Quando clico em pesquisar
+    Então os itens da locação devem ser exibidos na tabela 
+
+Caso 6: V
+    Cenário: Cadastrar uma data de devolução posterior a atual
+    Dado que desejo cadastrar uma data para a devolução
+    Quando digito uma data posterior a atual
+    Então uma mensagem de erro deve ser exibida 
+
+Caso 7: V
+    Cenário: Tentar cadastrar sem algum campo preenchido
+    Dado que desejo cadastrar uma devolução sem todos os campos
+    Quando aperto em "Cadastrar"
+    Então uma mensagem deve indicar o erro.

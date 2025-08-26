@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/cadastro.css">
+    <link rel="icon" href="../styles/images/logo.png" type="image/png">
+    <script src="../src/autenticador/visao-autenticador-html.ts" type="module" defer></script>
+    <script src="../src/locacao/cadastro/visao-cadastro-locacao-html.ts" type="module" defer></script>
+    <title>Rent-A-Bike - Cadastrar Locação</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <a href="../pages/listagem-locacoes.html">
+                <img src="../styles/images/logo.png" alt="Rent-A-Bike Logo" class="logo">
+            </a>        
+        </div>
+        <div class="nav-tabs">
+            <a href="../pages/listagem-locacoes.html" class="nav-tab active locacoes">Locações</a>
+            <a href="../pages/listagem-devolucoes.html" class="nav-tab devolucoes">Devoluções</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="inputs">
+            <div class="group">
+                <label for="cliente">Cliente:</label>
+
+                <div>
+                    <input type="text" name="cliente" id="cliente" class="cliente" data-id="0" placeholder="Código ou CPF"><button id="pesquisar-cliente" alt="Adicionar">➕</button>
+                </div>
+                <ul id="lista-clientes" hidden></ul>
+            </div>
+
+            <div class="group">
+                <label for="item">Qtd Horas:</label>
+                <input type="text" name="horas" id="horas" value="0" placeholder="Nº de Horas">
+            </div>
+            
+            <div class="group">
+                <label for="item">Item:</label>
+                <div>
+                    <input type="text" name="item" id="item" class="item" placeholder="Código" disabled><button id="pesquisar-item" alt="Pesquisar item" disabled>🔍</button>
+                </div>
+                <ul id="lista-itens" hidden></ul>
+            </div>
+
+            <div class="div-alerta" style="margin-right: 0;">
+                <output class="fade-in-element fade-out-element" hidden></output>
+            </div>
+        </section>
+
+        <section class="tabela-cadastro">
+            <table class="itens-locacao" border="1">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descrição</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <table class="resumo-locacao">
+                <thead>
+                    <tr><td>Resumo da locação:</td></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="../styles/images/total.png" class="icon"/> Valor Total(R$): <span class="valor-total"></span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../styles/images/desconto.png" class="icon"/> Desconto(R$): <span class="valor-desconto"></span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../styles/images/final.png" class="icon"/> Valor Final(R$): <span class="valor-final"></span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../styles/images/data-hora.png" class="icon"/> ENTREGA: <span class="entrega"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <div class="cadastrar">
+            <button id="cadastrar">Cadastrar</button>
+        </div>
+    </main>
+    
+    <footer>
+        <hr>
+        <div class="links">
+            <a href="./listagem-locacoes.html">Listar Locações</a>
+            <a href="./listagem-devolucoes.html">Listar Devoluções</a>
+            <a href="./cadastrar-locacao.html">Cadastrar Locaçãos</a>
+            <a href="./cadastrar-devolucoes.html">Cadastrar Devoluções</a>
+        </div>
+        <div>
+            © Cynthia Jardim & Vinicius Ouverney
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+Caso 1: 
+    Cenário: Relatório gerado sem datas inseridas
+    Dado que quero exibir o relatório de itens alugados por período sem inserir datas específicas
+    Quando clicar no botão para gerar o relatório
+    Então mesmo sem datas, os dados do relatório devem aparecer na tabela
+
+Caso 2: 
+    Cenário: Relatório vazio quando não há dados cadastrados
+    Dado que não existem locações efetuadas
+    Quando clicar no botão para gerar o relatório
+    Então uma mensagem informando que não há dados para serem exibidos devem ser mostrada na tabela
+
+Caso 3: 
+    Cenário: Data inicial inválida inserida
+    Dado que insiro uma data inicial superior a data atual
+    Quando eu clicar no botão para gerar o relatório 
+    Então uma mensagem informando que a data é inválida deve ser exibida
+
+Caso 4: 
+    Cenário: Datas inválidas inseridas
+    Dado que insiro uma data inicial superior a data final
+    Quando eu clicar no botão para gerar o relatório 
+    Então uma mensagem informando que as datas são inválidas deve ser exibida
